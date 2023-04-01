@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::after,
+::before {
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    border: 1px solid #FFF;
+    transition: all 0.08s ease-out 0s;
+}
+
+input:focus{
+    border-color: rgb(5, 47, 116);
+    box-shadow: rgba(186, 177, 255, 0.3) 0px 0px 0px 2pt;
+}
+
+.h-pattern{
+    height: calc(100% - 54px);
+}
+
+/* sidebar */
+.sidebar-container {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-open {
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 100;
+    height: calc(100vh - 80px);
+    padding: 2px 20px 20px 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 232, 235);
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+    visibility: visible;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+}
+
+.sidebar-close {
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 100;
+    height: calc(100vh - 80px);
+    padding: 2px 20px 20px 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 232, 235);
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+    visibility: visible;
+    transform: translate3d(100%, 0px, 0px);
+    opacity: 0;
+}
